@@ -72,4 +72,11 @@ def load_classes(classlist, interface=None):
 
     return dict(_load_class(t) for t in classlist)
 
+
+def load_modules(modulelist):
+    """
+    Convinience method for loading list of modules
+    """
+    return [importlib.import_module(m) for m in modulelist]
+
 ###############################################################################
