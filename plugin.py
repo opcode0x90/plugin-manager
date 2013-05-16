@@ -70,7 +70,7 @@ def load_classes(classlist, interface=None):
 
         return (classname, load_class(classname, params, interface))
 
-    return dict(_load_class(t) for t in classlist)
+    return [_load_class(t) for t in classlist]
 
 
 def load_modules(modulelist):
